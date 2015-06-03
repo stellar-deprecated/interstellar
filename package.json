@@ -1,5 +1,5 @@
 {
-  "name": "interestellar",
+  "name": "interstellar",
   "version": "0.0.1",
   "description": "Interstellar Module System command line tool.",
   "keywords": [
@@ -8,7 +8,7 @@
   ],
   "preferGlobal": true,
   "bin": {
-    "interestellar": "./bin/interestellar.js"
+    "interstellar": "./bin/interstellar.js"
   },
   "scripts": {
     "test": "gulp test"
