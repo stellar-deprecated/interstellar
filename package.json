@@ -1,0 +1,83 @@
+{
+  "name": "interestellar",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Interstellar Module System command line tool.",
+  "keywords": [
+    "stellar",
+    "interstellar"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "interestellar": "./bin/interestellar.js"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "Stellar Development Foundation <stellar@stellar.org>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stellar/interstellar.git"
+  },
+  "dependencies": {
+    "angular-mocks": "^1.3.8",
+    "autoprefixer-core": "^5.1.11",
+    "babel": "^5.4.7",
+    "babel-loader": "^5.1.3",
+    "chai": "^1.10.0",
+    "clui": "^0.3.1",
+    "colors": "^1.0.3",
+    "connect": "^3.3.3",
+    "connect-livereload": "^0.5.2",
+    "css-loader": "^0.9.0",
+    "del": "^1.1.1",
+    "extract-text-webpack-plugin": "^0.7.0",
+    "file-loader": "^0.8.1",
+    "gaze": "^0.6.4",
+    "glob": "^4.3.1",
+    "gulp": "^3.8.10",
+    "gulp-filter": "^2.0.0",
+    "gulp-gzip": "0.0.8",
+    "gulp-livereload": "^3.2.0",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.0",
+    "gulp-rework": "^1.0.2",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-s3": "^0.3.0",
+    "gulp-shell": "^0.2.11",
+    "gulp-util": "^3.0.1",
+    "gulp-webpack": "^1.1.0",
+    "html-loader": "^0.2.3",
+    "json-loader": "^0.5.1",
+    "karma": "^0.12.28",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sourcemap-loader": "^0.3.2",
+    "karma-spec-reporter": "0.0.16",
+    "karma-webpack": "=1.3.1",
+    "loader-utils": "^0.2.5",
+    "lodash": "^2.4.1",
+    "mocha": "^2.1.0",
+    "mocha-lazy-bdd": "0.0.4",
+    "mock-socket": "0.0.8",
+    "node-sass": "^3.0.0",
+    "opn": "^1.0.1",
+    "postcss": "^4.1.9",
+    "raw-loader": "^0.5.1",
+    "rework-import": "^2.0.0",
+    "run-sequence": "^1.0.2",
+    "serve-static": "^1.8.0",
+    "sinon": "git://github.com/cjohansen/Sinon.JS#sinon-2.0",
+    "sinon-chai": "^2.6.0",
+    "style-loader": "^0.8.2",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^1.4.13",
+    "webpack-dev-server": "^1.6.6"
+  },
+  "optionalDependencies": {
+    "gulp-atom-shell": "^0.1.2"
+  }
+}
