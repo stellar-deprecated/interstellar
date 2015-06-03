@@ -1,7 +1,6 @@
 {
   "name": "interestellar",
   "version": "0.0.1",
-  "private": true,
   "description": "Interstellar Module System command line tool.",
   "keywords": [
     "stellar",
