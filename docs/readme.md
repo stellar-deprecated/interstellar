@@ -20,9 +20,22 @@ This document will guide you through main concepts and advantages of Interstella
 
 ## Why Interstellar?
 
-Interstellar Module System was designed to allow easy development of [Stellar](https://www.stellar.org/) network client applications. IMS ecosystem consists of modules created by Stellar Development Foundation and open-source developers.
+People often think of modularity in silos:
+- Feature modules 
+- Interface modules (header, navigation, buttons, tables)
+- Code modules (libraries, services, dependencies)
 
-_TODO expand this section_
+*Interstellar aims to connect disparate models of modular systems into one holistic, expressive, interconnected system.* 
+
+####Interstellar has several technical design goals. It should enable:
+- Development of different apps from reusable, modular pieces of the same system
+- Development of features without codependencies (i.e., no house-of-cards style collapsing if you decide to pull out one feature)
+- On-the-fly tests of beta features without impact on existing features
+- Easy third-party customization
+
+##Quick overview
+
+![overview](https://www.stellar.org/wp-content/uploads/2015/06/interstellar-overview.png)
 
 ## Prerequisites
 
