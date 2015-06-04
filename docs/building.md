@@ -13,7 +13,7 @@ You may want to start with [Getting started](./getting-started.md) doc first.
 
 ## Webpack
 
-We're using [Webpack](http://webpack.github.io) for bundling and compilation because of it's flexibility, performance and possible code optimizations. Webpack can not only bundle JS files but also stylesheets and this feature is very important in our modules environment.
+We're using [Webpack](http://webpack.github.io) for bundling and compilation because of its flexibility, performance and possible code optimizations. Webpack can not only bundle JS files but also stylesheets and this feature is very important in our modules environment.
 
 ## Javascript
 
@@ -30,12 +30,12 @@ We will allow developers to create more entry points and change Webpack configur
 
 _Read more about stylesheets in [solar-css](https://github.com/stellar/solar-css) repo._
 
-Interstellar Module System frontend's building blocks are widgets. Every widget styles are attached to it's controller. This means that when developer decides to use a certain widget it's styles gets loaded too! But what if an application developer wants to change how it looks like? Interstellar concatenates project files and then is using [node-sass](https://github.com/sass/node-sass) to compile it. We're concatenating stylesheets in this order:
+Interstellar Module System frontend's building blocks are widgets. Every widget styles are attached to its controller. This means that when developer decides to use a certain widget its styles gets loaded too! But what if an application developer wants to change how it looks like? Interstellar concatenates project files and then is using [node-sass](https://github.com/sass/node-sass) to compile it. We're concatenating stylesheets in this order:
 
 1. All widgets are using [solar-css](https://github.com/stellar/solar-css) so we load core styles and mixins first. They can be used later by modules and the app.
-1. We check your application `styles` folder and concatenate all `*.header.scss` files. It's a great moment to add your core styles.
+1. We check your application `styles` folder and concatenate all `*.header.scss` files. It's a great place to add your core styles.
 1. We concatenate all styles of loaded widgets.
-1. We check your application `styles` folder again but this time we concatenate all `*.footer.scss` files. It's a great moment to overwrite widgets' styles.
+1. We check your application `styles` folder again but this time we concatenate all `*.footer.scss` files. It's a great place to overwrite widgets' styles.
 
 ## CLI
 
@@ -46,7 +46,8 @@ Interstellar Module System frontend's building blocks are widgets. Every widget 
 
 ## Where to go from here?
 
-* Check [`interstellar`](https://github.com/stellar/interstellar) CLI repo to read code.
+<!-- this section is copied in other .md files in this docs folder -->
 * Join our [Slack channel](http://slack.stellar.org/) to discuss Interstellar and share ideas!
-* Help us develop our [interstellar-stellar-client](https://github.com/stellar/interstellar-stellar-client).
-* [Fix issues](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+repo%3Astellar%2Finterstellar+repo%3Astellar%2Finterstellar-core+repo%3Astellar%2Finterstellar-stellard+repo%3Astellar%2Finterstellar-stellar-client) in Interstellar modules.
+* Help us develop our [interstellar-client](https://github.com/stellar/interstellar-client).
+* [Fix issues](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+repo%3Astellar%2Finterstellar+repo%3Astellar%2Finterstellar-core+repo%3Astellar%2Finterstellar-network+repo%3Astellar%2Finterstellar-network-widgets+repo%3Astellar%2Finterstellar-wallet+repo%3Astellar%2Finterstellar-sessions+repo%3Astellar%2Finterstellar-client) in Interstellar modules.
+* Develop your own module!

@@ -94,7 +94,7 @@ const mod = new Module('interstellar-friendbot');
 export default mod;
 ```
 
-Module can contain it's own Angular elements like controllers, services, templates etc. They are autoloaded using:
+Module can contain its own Angular elements like controllers, services, templates etc. They are autoloaded using:
 
 ```js
 app.controllers = require.context("./controllers", true);
@@ -122,7 +122,7 @@ mod.config(addConfig);
 
 To learn more please read [`interstellar-core.Config`](https://github.com/stellar/interstellar-core#interstellar-coreconfig-service) documentation.
 
-Finally, we need to run `define` method to register module artifacts: 
+Finally, we need to run `define` method to register module artifacts:
 
 ```js
 mod.define();
@@ -161,9 +161,9 @@ module.exports = function(mod) {
 };
 ```
 
-For devs familiar with AngularJS it's nothing new except the last 3 lines. We need these to register a directive in Interstellar.
+For devs familiar with AngularJS it's nothing new except for the last 3 lines. These lines simply register a directive in Interstellar.
 
-Every widget has it's template. Let's open our friendbot widget template:
+Every widget has a template. Let's open our friendbot widget template:
 
 ```html
 <div ng-controller="interstellar-friendbot.FriendbotWidgetController as widget">
@@ -173,7 +173,7 @@ Every widget has it's template. Let's open our friendbot widget template:
 </div>
 ```
 
-Read more about styling your widgets [here](kelp-readme).
+<!--Read more about styling your widgets [here](kelp-readme).-->
 
 Now, let's look at a widget controller:
 
@@ -238,6 +238,8 @@ Then run `interstellar develop` to compile and open a sample application in your
 ## Where to go from here?
 
 * Develop your own module!
+<!-- this section is copied in other .md files in this docs folder -->
 * Join our [Slack channel](http://slack.stellar.org/) to discuss Interstellar and share ideas!
-* Help us develop our [interstellar-stellar-client](https://github.com/stellar/interstellar-stellar-client).
-* [Fix issues](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+repo%3Astellar%2Finterstellar+repo%3Astellar%2Finterstellar-core+repo%3Astellar%2Finterstellar-stellard+repo%3Astellar%2Finterstellar-stellar-client) in Interstellar modules.
+* Help us develop our [interstellar-client](https://github.com/stellar/interstellar-client).
+* [Fix issues](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+repo%3Astellar%2Finterstellar+repo%3Astellar%2Finterstellar-core+repo%3Astellar%2Finterstellar-network+repo%3Astellar%2Finterstellar-network-widgets+repo%3Astellar%2Finterstellar-wallet+repo%3Astellar%2Finterstellar-sessions+repo%3Astellar%2Finterstellar-client) in Interstellar modules.
+* Develop your own module!

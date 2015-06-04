@@ -24,7 +24,7 @@ This document will guide you through main concepts and advantages of Interstella
 ## Why Interstellar?
 
 People often think of modularity in silos:
-- Feature modules 
+- Feature modules
 - Interface modules (header, navigation, buttons, tables)
 - Code modules (libraries, services, dependencies)
 
@@ -101,7 +101,7 @@ let config = require('./config.json');
 export const app = new App("sample-app", config);
 ```
 
-Conceptually, an application's configuration presents itself as a simple nested json object. The interesting part, however, is that you can not only configure your application but also modules you included. When no modules configuration is present in you app config a module sets it's default values. However, sometimes you may want to change it, for example [horizon](https://github.com/stellar/go-horizon) server hostname. To do it, simply add `modules.{module-name}` field in your config json and extend it with your custom variables. For example:
+Conceptually, an application's configuration presents itself as a simple nested json object. The interesting part, however, is that you can not only configure your application but also modules you included. When no modules configuration is present in you app config a module sets its default values. However, sometimes you may want to change it, for example [horizon](https://github.com/stellar/go-horizon) server hostname. To do it, simply add `modules.{module-name}` field in your config json and extend it with your custom variables. For example:
 
 ```json
 {
@@ -138,7 +138,7 @@ app.use(interstellarNetworkWidgets);
 
 This will make all Angular parts of a module (providers, services etc.) accessible from your app.
 
-Application can contain it's own Angular elements like controllers, services, templates etc. They are autoloaded using following code:
+An application can contain its own Angular elements like controllers, services, templates etc. They are autoloaded using following code:
 
 ```js
 app.controllers = require.context("./controllers", true);
@@ -172,7 +172,7 @@ app.bootstrap();
 
 ### Intents
 
-Modules (and app) in Interstellar communicate by broadcasting `Intent` objects using [Android-inspired](http://developer.android.com/guide/components/intents-filters.html) intent system. Modules can:
+Modules (and apps) in Interstellar communicate by broadcasting `Intent` objects using an [Android-inspired](http://developer.android.com/guide/components/intents-filters.html) intent system. Modules can:
 * **Broadcast Intents** to trigger some events in other modules,
 * **Register Broadcast Receivers** to listen to Intents sent by other modules.
 
@@ -212,7 +212,7 @@ import {Inject} from 'interstellar-core';
 @Inject("interstellar-core.Config", "interstellar-core.IntentBroadcast", "interstellar-sessions.Sessions")
 class IndexController {
   constructor(Config, IntentBroadcast, Sessions) {
-    // contructor code
+    // constructor code
   }
 }
 ```
@@ -236,15 +236,15 @@ The last important part of Interstellar we will mention in this document are wid
 
 As with services, widget name is a concatenation of module name and service name but this time with a hyphen in the middle.
 
-You can find full list of classes, services and widgets provided by each module in it's documentation.
+You can find full list of classes, services and widgets provided by each module in its documentation.
 
 ## Where to go from here?
 
+<!-- this section is copied in other .md files in this docs folder -->
 * Join our [Slack channel](http://slack.stellar.org/) to discuss Interstellar and share ideas!
-* Help us develop our [interstellar-stellar-client](https://github.com/stellar/interstellar-stellar-client).
-* [Fix issues](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+repo%3Astellar%2Finterstellar+repo%3Astellar%2Finterstellar-core+repo%3Astellar%2Finterstellar-stellard+repo%3Astellar%2Finterstellar-stellar-client) in Interstellar modules.
+* Help us develop our [interstellar-client](https://github.com/stellar/interstellar-client).
+* [Fix issues](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+repo%3Astellar%2Finterstellar+repo%3Astellar%2Finterstellar-core+repo%3Astellar%2Finterstellar-network+repo%3Astellar%2Finterstellar-network-widgets+repo%3Astellar%2Finterstellar-wallet+repo%3Astellar%2Finterstellar-sessions+repo%3Astellar%2Finterstellar-client) in Interstellar modules.
 * Develop your own module!
 
-##Get a Stellar testnet account
+## Getting a Stellar testnet account
 The yeoman generator generates a testnet account for you automatically, but you can also create one for yourself using our [friendbot](https://www.stellar.org/galaxy#friendbot).
-
