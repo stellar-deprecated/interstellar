@@ -1,6 +1,6 @@
 # `interstellar`
 
-The Interstellar Module System is an open ecosystem of modules that aims to make it easy to build a web application on the Stellar network. This repository (`interstellar`) contains a command line tool that standardizes the build process for Stellar web applications based on the module configuration.
+The Interstellar Module System is an open [ecosystem of modules](https://github.com/stellar/interstellar/blob/master/docs/module-list.md) that aims to make it easy to build a web application on the Stellar network. This repository (`interstellar`) contains a command line tool that standardizes the build process for Stellar web applications based on the module configuration.
 
 [Get Started](https://github.com/stellar/interstellar/blob/master/docs/readme.md) or take a look at [interstellar-client](https://github.com/stellar/interstellar-client) to see the system in action.
 
