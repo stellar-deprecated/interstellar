@@ -65,9 +65,11 @@ Let's look at our sample app code and discuss the most important parts. If you h
 Open `main.es6` file. In the top of the file you will notice `import` statements:
 ```js
 import interstellarCore, {App, Inject, Intent} from "interstellar-core";
-import interstellarStellard from "interstellar-stellard";
+import interstellarSessions from "interstellar-sessions";
+import interstellarNetwork from "interstellar-network";
+import interstellarNetworkWidgets from "interstellar-network-widgets";
 ```
-The most important concept of Modular Client System is modularity. Right now, there are several modules that provides different kinds of functionality for developers and [`interstellar-core`](https://github.com/stellar/interstellar-core) and [`interstellar-stellard`](https://github.com/stellar/interstellar-stellard) are two of them.
+The most important concept of Modular Client System is modularity. Right now, there are several modules that provides different kinds of functionality for developers and [`interstellar-network`](https://github.com/stellar/interstellar-network) and [`interstellar-sessions`](https://github.com/stellar/interstellar-sessions) are two of them.
 
 Modules can:
 * Export helpful classes like `App`, `Inject` and `Intent` in the example above.
@@ -91,7 +93,7 @@ Conceptually, an application's configuration presents itself as a simple nested 
     "value": true
   },
   "modules": {
-    "interstellar-stellard": {
+    "interstellar-network": {
       "horizon": {
         "server"
       }
@@ -113,7 +115,9 @@ Every module that will be used by an app must be registered with `use` method, l
 
 ```js
 app.use(interstellarCore);
-app.use(interstellarStellard);
+app.use(interstellarSessions);
+app.use(interstellarNetwork);
+app.use(interstellarNetworkWidgets);
 ```
 
 This will make all Angular parts of a module (providers, services etc.) accessible from your app.
@@ -189,7 +193,7 @@ Interstellar application is the AngularJS application and it also makes use of [
 ```js
 import {Inject} from 'interstellar-core';
 
-@Inject("interstellar-core.Config", "interstellar-core.IntentBroadcast", "interstellar-stellard.Sessions")
+@Inject("interstellar-core.Config", "interstellar-core.IntentBroadcast", "interstellar-sessions.Sessions")
 class IndexController {
   constructor(Config, IntentBroadcast, Sessions) {
     // contructor code
@@ -211,7 +215,7 @@ Provider | `FooProvider` | `interstellar-module.FooProvider`
 The last important part of Interstellar we will mention in this document are widgets. Widgets are complex solutions that are reponsible for a single task, like: showing account balances. They consist of templates, controllers and directives. Widgets can be used by writing a directive name in your application template:
 
 ```html
-<interstellar-stellard-balance></interstellar-stellard-balance>
+<interstellar-network-widgets-balance></interstellar-network-widgets-balance>
 ```
 
 As with services, widget name is a concatenation of module name and service name but this time with a hyphen in the middle.

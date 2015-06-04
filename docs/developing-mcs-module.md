@@ -102,7 +102,7 @@ app.directives = require.context("./directives", true);
 app.templates = require.context("raw!./templates", true);
 ```
 
-We're using Webpack [require.context](http://webpack.github.io/docs/context.html) to load many files at the same time.
+We're using Webpack [require.context](http://webpack.github.io/docs/context.html) to load many files at a time.
 
 ### Module configuration
 
@@ -137,7 +137,7 @@ Module can additionally export normal JS classes and objects. You can do it by u
 The last important part of modules we will mention in this document are widgets. Widgets are complex solutions that are reponsible for a single task, like: showing account balances. They consist of templates, controllers and directives. Widget can be embeded in an application by putting a directive name in an application template. For example:
 
 ```html
-<interstellar-stellard-balance></interstellar-stellard-balance>
+<interstellar-network-widgets-balance></interstellar-network-widgets-balance>
 ```
 
 Widget name is a concatenation of module name and directive name with a hyphen in the middle.
@@ -167,7 +167,7 @@ Every widget has it's template. Let's open our friendbot widget template:
 
 ```html
 <div ng-controller="interstellar-friendbot.FriendbotWidgetController as widget">
-  <div class="interstellar-stellard-receive-receiveContainer">
+  <div class="interstellar-network-modules-receive-receiveContainer">
     <button ng-click="widget.friendbot()">Friendbot</button><span ng-if="widget.friendbotSent">Sent!</span>
   </div>
 </div>
@@ -180,7 +180,7 @@ Now, let's look at a widget controller:
 ```js
 require('../styles/friendbot-widget.scss');
 
-@Inject("$scope", "interstellar-core.Config", "interstellar-stellard.Sessions", "interstellar-stellard.Server")
+@Inject("$scope", "interstellar-core.Config", "interstellar-sessions.Sessions", "interstellar-network.Server")
 class FriendbotWidgetController {
   constructor($scope, Config, Sessions, Server) {
     if (!Sessions.hasDefault()) {
@@ -212,7 +212,7 @@ There are a couple of important things to mention here:
 
 First, you should tie your widget styles to a controller by putting your `require` statement here. In the future, Interstellar will provide conditional `require`s mechanism - when application is not using your widget, styles won't be loaded too.
 
-Next, you can notice that modules can use other modules services. In an example above `FriendbotWidgetController` is using `interstellar-stellard.Sessions` and `interstellar-stellard.Server` services.
+Next, you can notice that modules can use other modules services. In an example above `FriendbotWidgetController` is using `interstellar-sessions.Sessions` and `interstellar-network.Server` services.
 
 Another interesting part of this controller is an example of using `interstellar-core.Config` service to read configuration value.
 
