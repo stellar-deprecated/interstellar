@@ -246,5 +246,5 @@ You can find full list of classes, services and widgets provided by each module 
 * Develop your own module!
 
 ##Get a Stellar testnet account
-The yeoman generator generates a testnet account for you automatically, but you can also create one for yourself using our [friendbot](https://www.stellar.org/galaxy#friendbot)
+The yeoman generator generates a testnet account for you automatically, but you can also create one for yourself using our [friendbot](https://www.stellar.org/galaxy#friendbot).
 
