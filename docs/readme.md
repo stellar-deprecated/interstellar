@@ -12,11 +12,14 @@ This document will guide you through main concepts and advantages of Interstella
 ## Contents
 
 1. [Why Interstellar?](#why-interstellar)
+2. [Quick Overview](#quick-overview)
 1. [Prerequisites](#prerequisites)
 1. [Installing `interstellar` command line tool](#installing-interstellar-command-line-tool)
 1. [Generating sample app](#generating-sample-app)
 1. [Interstellar application architecture](#interstellar-application-architecture)
 1. [Where to go from here?](#where-to-go-from-here)
+2. [Get a Stellar testnet account](#get-a-stellar-testnet-account)
+2. [List of modules](https://github.com/stellar/interstellar/blob/master/docs/module-list.md)
 
 ## Why Interstellar?
 
@@ -25,7 +28,7 @@ People often think of modularity in silos:
 - Interface modules (header, navigation, buttons, tables)
 - Code modules (libraries, services, dependencies)
 
-*Interstellar aims to connect disparate models of modular systems into one holistic, expressive, interconnected system.* 
+**Interstellar aims to connect disparate models of modular systems into one holistic, expressive, interconnected system.**
 
 ####Interstellar has several technical design goals. It should enable:
 - Development of different apps from reusable, modular pieces of the same system
@@ -241,3 +244,7 @@ You can find full list of classes, services and widgets provided by each module 
 * Help us develop our [interstellar-stellar-client](https://github.com/stellar/interstellar-stellar-client).
 * [Fix issues](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+repo%3Astellar%2Finterstellar+repo%3Astellar%2Finterstellar-core+repo%3Astellar%2Finterstellar-stellard+repo%3Astellar%2Finterstellar-stellar-client) in Interstellar modules.
 * Develop your own module!
+
+##Get a Stellar testnet account
+The yeoman generator generates a testnet account for you automatically, but you can also create one for yourself using our [friendbot](https://www.stellar.org/galaxy#friendbot)
+
