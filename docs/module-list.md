@@ -19,5 +19,5 @@ category: Modules
 - [`solar-stellarorg`](https://github.com/stellar/solar-stellarorg): Stellar.org's theme for Solar
 
 ###Helpers
-- [`generator-yeoman`](https://github.com/stellar/generator-interstellar)
+- [`generator-interstellar`](https://github.com/stellar/generator-interstellar)
 - [`interstellar-workspace`](https://github.com/stellar/interstellar-workspace): quick start to developing interstellar-client
