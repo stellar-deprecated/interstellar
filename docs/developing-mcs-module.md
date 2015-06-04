@@ -220,7 +220,14 @@ Finally, again we need to register controller to Interstellar with the last 3 li
 
 ## Checking if module works
 
-We're ready to check if our module works. To use our `<interstellar-friendbot-friendbot>` widget we simply need to insert it somewhere in our application templates, like this:
+We're ready to check if our module works. To use our `<interstellar-friendbot-friendbot>` widget we simply need to import our module and use it:
+
+```js
+import interstellarFriendbot from "interstellar-friendbot";
+app.use(interstellarFriendbot);
+```
+
+Then we only need to insert it somewhere in our application templates, like this:
 
 ```html
 <interstellar-friendbot-friendbot></interstellar-friendbot-friendbot>
