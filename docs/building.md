@@ -28,11 +28,15 @@ We will allow developers to create more entry points and change Webpack configur
 
 ## Stylesheets
 
-_Read more about stylesheets in [solar-css](https://github.com/stellar/solar-css) repo._
+_Read more about the css architecture in [solar css framework](https://github.com/stellar/solar) repo._
 
-Interstellar Module System frontend's building blocks are widgets. Every widget styles are attached to its controller. This means that when developer decides to use a certain widget its styles gets loaded too! But what if an application developer wants to change how it looks like? Interstellar concatenates project files and then is using [node-sass](https://github.com/sass/node-sass) to compile it. We're concatenating stylesheets in this order:
+Interstellar apps use the Solar css framework, a framework designed to enable modules to adapt to different themes with ease. Interstellar apps and modules follow the architecture and style guide of the Solar framework.
 
-1. All widgets are using [solar-css](https://github.com/stellar/solar-css) so we load core styles and mixins first. They can be used later by modules and the app.
+Interstellar Module System frontend's building blocks are widgets. Every widget styles are attached to its controller. This means that when developer decides to use a certain widget its styles gets loaded too! But what if an application developer wants to change how it looks like?
+
+Interstellar concatenates project files and then is using [node-sass](https://github.com/sass/node-sass) to compile it. We're concatenating stylesheets in this order:
+
+1. All widgets are using [solar-css](https://github.com/stellar/solar) and load the styles and libraries from each of the theme layers. These mixins and variables can be used later by modules and the app.
 1. We check your application `styles` folder and concatenate all `*.header.scss` files. It's a great place to add your core styles.
 1. We concatenate all styles of loaded widgets.
 1. We check your application `styles` folder again but this time we concatenate all `*.footer.scss` files. It's a great place to overwrite widgets' styles.
