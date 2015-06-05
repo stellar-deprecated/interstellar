@@ -36,7 +36,7 @@ Interstellar Module System frontend's building blocks are widgets. Every widget 
 
 Interstellar concatenates project files and then is using [node-sass](https://github.com/sass/node-sass) to compile it. We're concatenating stylesheets in this order:
 
-1. All widgets are using [solar-css](https://github.com/stellar/solar) and load the styles and libraries from each of the theme layers. These mixins and variables can be used later by modules and the app.
+1. Add in the theming layers of the [solar css framework](https://github.com/stellar/solar) and load the styles and libraries from each of the theme layers. These mixins and variables can be used later by modules and the app.
 1. We check your application `styles` folder and concatenate all `*.header.scss` files. It's a great place to add your core styles.
 1. We concatenate all styles of loaded widgets.
 1. We check your application `styles` folder again but this time we concatenate all `*.footer.scss` files. It's a great place to overwrite widgets' styles.

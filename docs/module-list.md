@@ -15,7 +15,7 @@ category: Modules
 - [`interstellar-client`](https://github.com/stellar/interstellar-client): reference client
 
 ##Complementary repositories or modules
-- [`solar-css`](https://github.com/stellar/solar-css): css framework for web applications on the Stellar network
+- [`solar`](https://github.com/stellar/solar): css framework for web applications on the Stellar network
 - [`solar-stellarorg`](https://github.com/stellar/solar-stellarorg): Stellar.org's theme for Solar
 
 ###Helpers
