@@ -4,7 +4,7 @@ title: List of Interstellar modules
 category: Modules
 ---
 
-- [`interstellar`](https://github.com/stellar/interstellar): command line interface
+##Modules
 - [`interstellar-core`](https://github.com/stellar/interstellar-core): core JS wrapper
 - [`interstellar-network`](https://github.com/stellar/interstellar-network): network services
 - [`interstellar-network-widgets`](https://github.com/stellar/interstellar-network-widgets): widgets for network services
@@ -19,5 +19,6 @@ category: Modules
 - [`solar-stellarorg`](https://github.com/stellar/solar-stellarorg): Stellar.org's theme for Solar
 
 ###Helpers
+- [`interstellar`](https://github.com/stellar/interstellar): command line interface
 - [`generator-interstellar`](https://github.com/stellar/generator-interstellar)
 - [`interstellar-workspace`](https://github.com/stellar/interstellar-workspace): quick start to developing interstellar-client
