@@ -9,7 +9,7 @@ Developing Interstellar module
 
 This document will guide you through a process of developing your own Interstellar module that will be used by Interstellar application.
 
-You may want to start with [Getting started](./getting-started.md) doc first.
+You may want to start with [Getting started](./readme.md) doc first.
 
 ## Contents
 

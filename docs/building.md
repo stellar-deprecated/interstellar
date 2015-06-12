@@ -7,9 +7,9 @@ category: Getting Started
 Build process
 ===============
 
-This document will explain how build process looks like in IMS.
+This document will explain how the build process looks like in IMS.
 
-You may want to start with [Getting started](./getting-started.md) doc first.
+You may want to start with [Getting started](./readme.md) doc first.
 
 ## Webpack
 
