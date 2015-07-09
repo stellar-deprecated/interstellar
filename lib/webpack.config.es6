@@ -87,7 +87,7 @@ var configForApp = function() {
 
 var environments = {
   dev: {
-    devtool: "eval-source-map",
+    devtool: "eval",
     noInfo: true
   },
   tst: {

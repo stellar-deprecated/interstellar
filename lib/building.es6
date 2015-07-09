@@ -121,6 +121,7 @@ gulp.task("build:make-compiler", () => {
       spinner.stop();
     }
     fs.writeFileSync('.tmp/webpacked/BUILT_AT', (new Date()).toString());
+    fs.writeFileSync('.tmp/stats.json', JSON.stringify(stats.toJson()));
     console.log(stats.toString({
       hash: false,
       version: false,

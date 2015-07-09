@@ -2,7 +2,7 @@ var os   = require('os');
 
 module.exports = {
   app:       $.util.env.app,
-  env:       $.util.env.env || "stg",
+  env:       $.util.env.env || "dev",
   platform:  $.util.env.platform || `${os.platform()}-${os.arch()}`,
   verbose:   $.util.env.verbose || false,
   port:      Number($.util.env.port || "8000"),
