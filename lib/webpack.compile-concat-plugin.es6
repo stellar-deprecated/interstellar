@@ -8,6 +8,7 @@ var postcss      = require('postcss');
 var path         = require("path");
 var fs           = require('fs');
 var sass         = require('node-sass');
+var _            = require('lodash');
 
 function CompileConcatPlugin(files, outFile) {
   this.files = files;
@@ -38,6 +39,11 @@ CompileConcatPlugin.prototype.apply = function(compiler) {
         path.join(process.cwd(), "node_modules"),
         path.join(process.cwd(), "node_modules", "interstellar-core", "node_modules")
       ]
+    });
+
+    // We need to add included files to dependencies to make webpack watch them.
+    result.stats.includedFiles.forEach(file => {
+      context.fileDependencies.push(path.normalize(file));
     });
 
     // Delete artifacts
