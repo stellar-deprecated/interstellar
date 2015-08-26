@@ -11,7 +11,8 @@
     "interstellar": "./bin/interstellar.js"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "postversion": "git push && git push --tags"
   },
   "author": "Stellar Development Foundation <stellar@stellar.org>",
   "license": "Apache-2.0",
