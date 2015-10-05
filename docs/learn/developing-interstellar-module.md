@@ -1,15 +1,15 @@
 ---
 id: developing-interstellar-module
-title: Developing Interstellar module
+title: Developing Interstellar Modules
 category: Getting Started
 ---
 
-Developing Interstellar module
+Developing Interstellar Modules
 ===============
 
-This document will guide you through a process of developing your own Interstellar module that will be used by Interstellar application.
+This document will guide you through the process of developing your own module that will be used by the Interstellar application.
 
-You may want to start with the [Getting started](./) doc first.
+You may want to begin with the [Getting Started](./) doc.
 
 ## Contents
 
