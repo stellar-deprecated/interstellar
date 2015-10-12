@@ -1,15 +1,15 @@
 ---
 id: build-process
-title: Build process
+title: Build Process
 category: Getting Started
 ---
 
-Build process
+Build Process
 ===============
 
-This document will explain how the build process looks like in IMS.
+This document explains what the build process looks like in Interstellar.
 
-You may want to start with [Getting started](./readme.md) doc first.
+You may want to begin with the [Getting Started](./) doc.
 
 ## Webpack
 
