@@ -68,7 +68,6 @@ var baseConfig = {
       path.resolve(process.cwd(), '.tmp/webpacked/footer.scss')
     ], path.resolve(process.cwd(), '.tmp/webpacked/main.css')),
     new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
-
   ]
 };
 
@@ -120,6 +119,10 @@ function makeConfig(env, options) {
 
   merge(result, configForApp());
   merge(result, options || {});
+
+  result.plugins.push(new webpack.DefinePlugin({
+    INTERSTELLAR_ENV: JSON.stringify(env)
+  }));
 
   return result;
 }
