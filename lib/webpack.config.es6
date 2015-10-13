@@ -40,6 +40,10 @@ var baseConfig = {
         loader: 'json'
       },
       {
+        test: /\.(jpe?g|png|gif|svg)/,
+        loader: 'file?name=images/[hash].[ext]'
+      },
+      {
         test: /\.header\.scss$/,
         loader: headerSassExtractTextPlugin.extract("raw"),
         include: path.resolve(process.cwd(), "styles")
