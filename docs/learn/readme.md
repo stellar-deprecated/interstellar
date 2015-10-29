@@ -34,13 +34,13 @@ People often think of modularity in silos:
 
 **Interstellar aims to connect disparate models of modular systems into one holistic, expressive, interconnected system.**
 
-####Interstellar has several technical design goals. It should enable:
+#### Interstellar has several technical design goals. It should enable:
 - Development of different apps from reusable, modular pieces of the same system
 - Development of features without codependencies (i.e., no house-of-cards style collapsing if you decide to pull out one feature)
 - On-the-fly tests of beta features without impact on existing features
 - Easy third-party customization
 
-##Quick overview
+## Quick overview
 
 ![overview](https://www.stellar.org/wp-content/uploads/2015/06/interstellar-overview.png)
 
