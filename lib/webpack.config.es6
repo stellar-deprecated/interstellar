@@ -3,6 +3,7 @@ var _                   = require("lodash");
 var webpack             = require("webpack");
 var ExtractTextPlugin   = require("extract-text-webpack-plugin");
 var CompileConcatPlugin = require("./webpack.compile-concat-plugin");
+var HtmlWebpackPlugin   = require('html-webpack-plugin');
 
 let headerSassExtractTextPlugin   = new ExtractTextPlugin(1, "header.scss", {allChunks: true});
 let footerSassExtractTextPlugin   = new ExtractTextPlugin(2, "footer.scss", {allChunks: true});
@@ -12,7 +13,7 @@ module.exports = makeConfig;
 
 var baseConfig = {
   output: {
-    filename: "[name].bundle.js"
+    filename: "[name]-[chunkhash].js"
   },
   resolve: {
     root: [process.cwd()],
@@ -66,12 +67,12 @@ var baseConfig = {
     headerSassExtractTextPlugin,
     footerSassExtractTextPlugin,
     externalSassExtractTextPlugin,
-    new CompileConcatPlugin([
-      path.resolve(process.cwd(), '.tmp/webpacked/header.scss'),
-      path.resolve(process.cwd(), '.tmp/webpacked/modules.scss'),
-      path.resolve(process.cwd(), '.tmp/webpacked/footer.scss')
-    ], path.resolve(process.cwd(), '.tmp/webpacked/main.css')),
-    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
+    new CompileConcatPlugin(['header.scss', 'modules.scss', 'footer.scss'], 'style-[contenthash].css'),
+    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor-[chunkhash].js"),
+    new HtmlWebpackPlugin({
+      template: process.cwd()+'/index.html',
+      inject: 'body'
+    })
   ]
 };
 

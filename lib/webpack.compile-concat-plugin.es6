@@ -9,6 +9,7 @@ var path         = require("path");
 var fs           = require('fs');
 var sass         = require('node-sass');
 var _            = require('lodash');
+var RawModule    = require('webpack/lib/RawModule');
 
 function CompileConcatPlugin(files, outFile) {
   this.files = files;
@@ -16,22 +17,19 @@ function CompileConcatPlugin(files, outFile) {
 }
 module.exports = CompileConcatPlugin;
 CompileConcatPlugin.prototype.apply = function(compiler) {
-  var files = this.files;
-  compiler.plugin("after-emit", (context, callback) => {
+  compiler.plugin("emit", (context, callback) => {
+    var files = this.files;
     // Concat files
     var filesContents = [];
     for (var file of files) {
-      if (fs.existsSync(file)) {
-        filesContents.push(fs.readFileSync(file));
-        filesContents.push(new Buffer("\n"));
-      }
+      filesContents.push(new Buffer(context.assets[file].source()));
     }
 
     // Compile
     // TODO allow to update this opts from outside
     var result = sass.renderSync({
       data: Buffer.concat(filesContents).toString(),
-      outFile: this.outFile,
+      //outFile: this.outFile,
       sourceMap: true,
       //outputStyle: 'compressed',
       includePaths: [
@@ -47,30 +45,36 @@ CompileConcatPlugin.prototype.apply = function(compiler) {
     });
 
     // Delete artifacts
-    for (var file of files) {
-      if (fs.existsSync(file)) {
-        fs.unlinkSync(file);
-      }
-      if (fs.existsSync(file+'.map')) {
-        fs.unlinkSync(file+'.map');
-      }
-    }
+    //for (var file of files) {
+    //  if (fs.existsSync(file)) {
+    //    fs.unlinkSync(file);
+    //  }
+    //  if (fs.existsSync(file+'.map')) {
+    //    fs.unlinkSync(file+'.map');
+    //  }
+    //}
 
     // postcss processing
     postcss([autoprefixer])
       .process(result.css, {
-        from: this.outFile,
-        to: this.outFile,
-        map: {
-          prev: result.map.toString(),
-          inline: false
-        }
+        //from: this.outFile,
+        //to: this.outFile,
+        //map: {
+        //  prev: result.map.toString(),
+        //  inline: false
+        //}
       })
       .then(result => {
-        fs.writeFileSync(this.outFile, result.css);
-        if (result.map) {
-          fs.writeFileSync(this.outFile+'.map', result.map);
-        }
+        let module = new RawModule(result.css, this.outFile, this.outFile);
+        let filename = this.outFile.replace(/\[(?:(\w+):)?contenthash(?::([a-z]+\d*))?(?::(\d+))?\]/ig, module.getSourceHash());
+        let chunk = _.find(context.chunks, ch => ch.name === 'main');
+        chunk.files.push(filename);
+        context.assets[filename] = module.source();
+        //fs.writeFileSync(this.outFile, result.css);
+        //if (result.map) {
+        //  //fs.writeFileSync(this.outFile+'.map', result.map);
+        //  compilation.assets[`${this.outFile}.map`] = result.map;
+        //}
         callback();
       });
   });
