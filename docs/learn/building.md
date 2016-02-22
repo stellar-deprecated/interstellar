@@ -7,6 +7,8 @@ category: Getting Started
 Build Process
 ===============
 
+**Development of `interstellar` project is stopped. Please check our [JS SDK](https://www.stellar.org/developers/js-stellar-sdk/learn/index.html).**
+
 This document explains what the build process looks like in Interstellar.
 
 You may want to begin with the [Getting Started](./) doc.

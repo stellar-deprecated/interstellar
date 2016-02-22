@@ -7,6 +7,8 @@ category: Getting Started
 Developing Interstellar Modules
 ===============
 
+**Development of `interstellar` project is stopped. Please check our [JS SDK](https://www.stellar.org/developers/js-stellar-sdk/learn/index.html).**
+
 This document will guide you through the process of developing your own module that will be used by the Interstellar application.
 
 You may want to begin with the [Getting Started](./) doc.

@@ -4,6 +4,8 @@ title: List of Interstellar Modules
 category: Modules
 ---
 
+**Development of `interstellar` project is stopped. Please check our [JS SDK](https://www.stellar.org/developers/js-stellar-sdk/learn/index.html).**
+
 ## Modules
 - [`interstellar-core`](https://github.com/stellar/interstellar-core): core JS wrapper
 - [`interstellar-network`](https://github.com/stellar/interstellar-network): network services
