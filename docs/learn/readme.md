@@ -4,7 +4,7 @@ title: Overview
 
 # `interstellar`
 
-**Development of `interstellar` project is stopped. Please check our [JS SDK](https://www.stellar.org/developers/js-stellar-sdk/learn/index.html).**
+**Development of the `interstellar` project has been paused. Please check out the [JS Stellar SDK](https://www.stellar.org/developers/js-stellar-sdk/learn/index.html) docs for how integrate with Stellar using JavaScript.**
 
 The Interstellar Module System is an open [ecosystem of modules](https://github.com/stellar/interstellar/blob/master/docs/module-list.md) that aims to make it easy to build a web application on the Stellar network. This repository (`interstellar`) contains a command line tool that standardizes the build process for Stellar web applications based on the module configuration.
 
