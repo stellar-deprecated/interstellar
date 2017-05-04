@@ -13,7 +13,8 @@ module.exports = makeConfig;
 
 var baseConfig = {
   output: {
-    filename: "[name]-[chunkhash].js"
+    filename: "[name]-[chunkhash].js",
+    publicPath: ''
   },
   resolve: {
     root: [process.cwd()],
