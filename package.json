@@ -1,11 +1,14 @@
 {
   "name": "interstellar",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Interstellar Module System command line tool.",
   "keywords": [
     "stellar",
     "interstellar"
   ],
+  "engines": {
+    "node" : ">=6.9 <7"
+  },
   "preferGlobal": true,
   "bin": {
     "interstellar": "./bin/interstellar.js"
