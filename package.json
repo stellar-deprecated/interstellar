@@ -6,9 +6,6 @@
     "stellar",
     "interstellar"
   ],
-  "engines": {
-    "node" : ">=6.9 <7"
-  },
   "preferGlobal": true,
   "bin": {
     "interstellar": "./bin/interstellar.js"
