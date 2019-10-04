@@ -7,7 +7,6 @@ import { createReadStream } from 'fs';
 
 gulp.task("stroopy", () => createReadStream(`${__dirname}/stroopy.txt`).pipe(process.stdout));
 
-require("./lib/testing");
 require("./lib/building");
 require("./lib/generating");
 require("./lib/cleaning");
